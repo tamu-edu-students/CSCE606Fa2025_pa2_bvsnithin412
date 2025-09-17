@@ -8,3 +8,15 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+#movies {
+  border: 2px solid #333;
+  width: 80%;
+  margin: 20px auto;
+}
+#movies th, #movies td {
+  padding: 8px 12px;
+  text-align: left;
+}
+#movies th {
+  background: #eee;
+}
