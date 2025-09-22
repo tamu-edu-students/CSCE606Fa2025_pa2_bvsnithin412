@@ -20,3 +20,10 @@
 #movies th {
   background: #eee;
 }
+#movies th.sorted {
+  background: #b3d9ff;
+  font-weight: bold;
+}
+#movies td.sorted {
+  background: #f0f8ff;
+}

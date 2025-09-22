@@ -9,4 +9,9 @@ module MoviesHelper
 		end
 		link_to "#{title}#{arrow}".html_safe, movies_path(sort: column, direction: current_dir)
 	end
+
+	# Returns CSS class for sorted column
+	def sorted_class(column)
+		params[:sort] == column ? 'sorted' : ''
+	end
 end

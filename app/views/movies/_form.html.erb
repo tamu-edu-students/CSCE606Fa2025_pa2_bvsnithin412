@@ -1,9 +1,9 @@
 <%= form_with(model: movie) do |form| %>
   <% if movie.errors.any? %>
-    <div style="color: red">
+    <div style="color: red; text-align: center; margin-bottom: 20px;">
       <h2><%= pluralize(movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
 
-      <ul>
+      <ul style="list-style: none; padding: 0;">
         <% movie.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+  <div style="margin-bottom: 20px; text-align: center;">
+    <%= form.label :title, style: "display: block; font-weight: bold; margin-bottom: 5px;" %>
+    <%= form.text_field :title, style: "padding: 8px; border: 1px solid #ccc; border-radius: 4px; width: 300px;" %>
   </div>
 
-  <div>
-    <%= form.label :rating, style: "display: block" %>
-    <%= form.text_field :rating %>
+  <div style="margin-bottom: 20px; text-align: center;">
+    <%= form.label :rating, style: "display: block; font-weight: bold; margin-bottom: 5px;" %>
+    <%= form.text_field :rating, style: "padding: 8px; border: 1px solid #ccc; border-radius: 4px; width: 300px;" %>
   </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
+  <div style="margin-bottom: 20px; text-align: center;">
+    <%= form.label :description, style: "display: block; font-weight: bold; margin-bottom: 5px;" %>
+    <%= form.text_field :description, style: "padding: 8px; border: 1px solid #ccc; border-radius: 4px; width: 300px;" %>
   </div>
 
-  <div>
-    <%= form.label :release_date, style: "display: block" %>
-    <%= form.text_field :release_date %>
+  <div style="margin-bottom: 20px; text-align: center;">
+    <%= form.label :release_date, "Release date (YYYY-MM-)", style: "display: block; font-weight: bold; margin-bottom: 5px;" %>
+    <%= form.date_field :release_date, style: "padding: 8px; border: 1px solid #ccc; border-radius: 4px; width: 300px;" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div style="text-align: center;">
+    <%= form.submit style: "background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;" %>
   </div>
 <% end %>

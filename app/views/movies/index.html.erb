@@ -2,15 +2,19 @@
 
 <% content_for :title, "Movies" %>
 
-<h1>Movies</h1>
+<h1 style="text-align: center;">Movies</h1>
 
+<div style="text-align: center; margin: 20px 0;">
+  <%= link_to "New Movie", new_movie_path, 
+      style: "background-color: #28a745; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;" %>
+</div>
 
 <table id="movies" border="1" style="border-collapse: collapse;">
   <thead>
     <tr>
-      <th><%= sort_link('title', 'Title') %></th>
-      <th><%= sort_link('rating', 'Rating') %></th>
-      <th><%= sort_link('release_date', 'Release date') %></th>
+      <th class="<%= sorted_class('title') %>"><%= sort_link('title', 'Title') %></th>
+      <th class="<%= sorted_class('rating') %>"><%= sort_link('rating', 'Rating') %></th>
+      <th class="<%= sorted_class('release_date') %>"><%= sort_link('release_date', 'Release date') %></th>
     </tr>
   </thead>
   <tbody>
@@ -20,4 +24,3 @@
   </tbody>
 </table>
 
-<%= link_to "New movie", new_movie_path %>

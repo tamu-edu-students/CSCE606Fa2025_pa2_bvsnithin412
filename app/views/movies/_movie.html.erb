@@ -1,8 +1,8 @@
 <tr id="<%= dom_id movie %>">
-  <td>
+  <td class="<%= sorted_class('title') %>">
     <%= movie.title %><br>
     <%= link_to "Show this movie", movie %>
   </td>
-  <td><%= movie.rating %></td>
-  <td><%= movie.release_date.to_date %></td>
+  <td class="<%= sorted_class('rating') %>"><%= movie.rating %></td>
+  <td class="<%= sorted_class('release_date') %>"><%= movie.release_date&.to_date || 'Not specified' %></td>
 </tr>
