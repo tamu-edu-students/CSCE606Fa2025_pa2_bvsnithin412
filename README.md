@@ -6,6 +6,10 @@
 
 This repository contains the RottenPotatoes Rails application used in CSCE 616 to practice Ruby on Rails (Rails 8) concepts: MVC architecture, RESTful routing, and basic CRUD operations.
 
+## Live Demo
+
+ **View the live application Deployed on Heroku:** [https://hidden-hamlet-49765-49d80390de70.herokuapp.com/movies](https://hidden-hamlet-49765-49d80390de70.herokuapp.com/movies)
+
 ## Tech Stack
 
 | Layer | Technology |
@@ -13,10 +17,7 @@ This repository contains the RottenPotatoes Rails application used in CSCE 616 t
 | Language | Ruby 3.4.5 |
 | Framework | Rails 8.0.2.1 |
 | Web Server | Puma |
-| Assets | Propshaft + Importmap |
 | Database | SQLite3 |
-| Static Analysis | Rubocop (Omakase) |
-| Security Scan | Brakeman |
 
 ## Prerequisites
 
@@ -69,16 +70,6 @@ bin/rails db:seed       # load sample data
 bin/rails db:rollback   # undo last migration
 ```
 
-## Code Quality
-
-Run style checks:
-```bash
-bundle exec rubocop
-```
-
-Run security scan:
-```bash
-bundle exec brakeman
 ```
 
 ## Project Structure
