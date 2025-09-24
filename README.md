@@ -70,8 +70,6 @@ bin/rails db:seed       # load sample data
 bin/rails db:rollback   # undo last migration
 ```
 
-```
-
 ## Project Structure
 
 ```
